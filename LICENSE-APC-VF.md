@@ -19,7 +19,7 @@ The result is a Work that is fully owned and fully accessible. The Author is com
 
 ### I. Declaration of Authorship
 
-**Author:** [AUTHOR NAME OR ENTITY]
+**Author:** Slavko Stojnić
 
 All files, ideas, methods, systems, processes, algorithms, architectures, designs, and functional content contained in this repository, project, or body of work (the "Work") are the original creation of the Author.
 
@@ -29,10 +29,10 @@ This publication constitutes a public, timestamped, cryptographically verifiable
 
 | Proof Layer | Value |
 |---|---|
-| **Merkle Root / Git Tree Hash** | `[INSERT HASH]` |
-| **RFC 3161 Timestamp Token** | `.timestamps/[HASH].tsr` |
-| **Redundant Timestamp** | `.timestamps/[HASH].ots` |
-| **Date of First Publication** | `[INSERT DATE UTC]` |
+| **Merkle Root / Git Tree Hash** | `ef55c78c8f66e557ca179dbcd07bc558de8bc74e` |
+| **RFC 3161 Timestamp Token** | `.timestamps/ef55c78c8f66e557ca179dbcd07bc558de8bc74e.tsr` |
+| **Redundant Timestamp** | `.timestamps/ef55c78c8f66e557ca179dbcd07bc558de8bc74e.ots` |
+| **Date of First Publication** | `2026-02-26 UTC` |
 
 The Merkle root is a single cryptographic hash derived from the combined hashes of every file in this Work. A change to any file produces a different root. The root proves the integrity of the Work as an indivisible unit.
 
@@ -231,6 +231,6 @@ See `VERIFY.md` for the manual timestamp process and automated workflow setup.
 
 ---
 
-**© [AUTHOR NAME] — [YEAR]. All rights reserved.**
+**© Slavko Stojnić — 2026. All rights reserved.**
 **Authorship & Patent Claim established by public record.**
 **Universal access granted under ValueFlow revenue sharing.**
