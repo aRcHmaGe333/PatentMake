@@ -1,6 +1,6 @@
 # IPClaim
 
-**Intellectual Property Claim for Am Era of Progress**
+**Intellectual Property Claim for An Era of Progress**
 
 IPClaim is a repo toolkit and proof model for publishing authorship claims as public, timestamped, independently verifiable records. `Stamped` is the service/bundling layer built on the same model, not a separate proof system.
 
