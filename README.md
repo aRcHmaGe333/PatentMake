@@ -1,8 +1,13 @@
+
 # IPClaim
 
-**Intellectual Property Claim for An Era of Progress**
+> **Universal, Evidence-Based IP Claim**
 
-IPClaim is a repo toolkit and proof model for publishing authorship claims as public, timestamped, independently verifiable records. 
+> I claim, as my intellectual property, whatever can be claimed and has not been previously claimed as IP by another. I do not need to specify in advance which parts of my work qualify as IP, nor do I need to hire experts, clerks, or lawyers to determine this for me. By publishing this work, I assert that all content disclosed herein—if and to the extent it qualifies as previously unclaimed intellectual property - is hereby claimed by me, with the combined timestamp and contents of disclosure provided as immutable, cryptographic evidence. 
+
+**Intellectual Property Claim for Am Era of Progress**
+
+IPClaim is a repo toolkit and proof model for publishing authorship claims as public, timestamped, independently verifiable records. IPClaim provides both the proof system and the reference implementation—there is no separate service or bundling layer.
 
 ## IPClaim: Meta-Proof - Your work is its own witness
 
@@ -21,13 +26,29 @@ when you
 
 You don't need to know which parts of your work are protectable and which aren't. You don't need to hire a lawyer to figure out the boundaries. You don't need to search databases to check if someone else did something similar. You don't need to classify your work into legal categories.
 
-You publish. You timestamp. You claim everything you created.
+
+You publish, timestamp, and claim everything you created—specifically, whatever can be claimed and has not been previously claimed as IP by another. You do not need to know in advance which parts qualify; the act of public disclosure, with cryptographic timestamp, is your claim to all qualifying IP.
 
 If something you made can be protected as a patent — you claimed it. If it falls under copyright — you claimed it. If it falls under some category that doesn't exist yet — you claimed it the moment you published, and the timestamp proves when.
 
 If someone else disclosed their unique IP before you, your claim does not include that part. It only covers the Intellectual Property you created and disclosed, timestamped. Your verifiable unique work is undeniably exposed to the public — no one else can claim it as theirs, for any purpose, in any context.
 
-**What this removes from your life:**
+> Good-Faith Correction and Restitution
+
+> If, due to a lack of information in the general public, any portion of this work is found to have been rightfully owned or previously claimed as IP by another party, I commit to two things: 
+1) I commit to correcting the IPClaim to accurately reflect the true IP distribution from that point forward; 
+2) I commit to transferring an objectively estimated share of any benefits I have received from the incorrect claim to the rightful owner, including benefits derived via the ValueFlow system or other documented means.
+
+> The reasoning behind this is as follows: 
+
+Discoverability is a shared responsibility.
+- The original IP owner is obligated to register their claim in a publicly searchable, accessible form and to contact known or reasonably identifiable infringers (in this case, myself) upon discovery. 
+- The builder is obligated to perform reasonable due diligence against standard, accessible registries — not to excavate obscure or practically unavailable data. Stated ignorance of a claim that was registered in a standard, searchable registry at the time of disclosure does not constitute good faith.
+- Where benefits have been reinvested, the restitution obligation is anchored to the objectively estimated value of those benefits at the time of receipt. Losses from subsequent reinvestment do not reduce this anchor. Only genuine profits generated from reinvestment are shared proportionally, and no liability exists to produce the full estimated sum under an unreasonable timeframe. 
+
+> These commitments reflect the principle that both I and the general public acted in good faith based on the best available knowledge at the time of disclosure.
+
+**What IPClaim removes from your life:**
 
 - **No prior art search.** You don't need to pay someone to find out if your work is "novel enough."
 - **No legal classification.** You don't decide what type of protection applies. The work speaks for itself.
@@ -45,87 +66,43 @@ The traditional system asks you to be an inventor, a lawyer, a business analyst,
 
 ---
 
-## Stamp a Repo (Automated)
 
-The fastest way to claim a repository. From anywhere:
+
+
+## How to Claim IP in Your Work (Automated)
+
+> **Restatement:**
+> This system is designed to let you claim, as your intellectual property, whatever can be claimed and has not been previously claimed as IP by another. You do not need to enumerate or classify your IP in advance; the act of timestamped public disclosure is your claim to all qualifying IP within your work.
+
+The fastest way to establish a public, timestamped claim to the intellectual property within your project. This process does not claim the repository itself, but the original work (code, documents, designs, etc.) you have created and published within it. From anywhere:
+
+
+Intellectual property (IP) refers to legal protections for creations of the mind, including inventions, artistic works, designs, and commercial symbols. The four primary types of IP are patents (inventions), trademarks (brand identity), copyrights (creative works), and trade secrets (confidential information). These rights enable creators to gain recognition or financial benefit. 
+
+> **Summary Principle:**
+> All content disclosed here, to the extent it qualifies as IP and was not previously claimed, is claimed by the author. If a mistake is made and another's IP is later discovered, restitution will be made in good faith.
+
+WIPO - World Intellectual Property Organization
+
+Core Types of Intellectual Property
+Patents: Protect new inventions, processes, or technology, granting the owner exclusive rights to prevent others from making, using, or selling the invention, usually for 20 years.
+Trademarks: Protect symbols, names, logos, or slogans used to distinguish goods or services in the marketplace.
+Copyrights: Protect original works of authorship, such as literature, music, software, and art, from unauthorized copying.
+Trade Secrets: Protect confidential, proprietary business information that provides a competitive edge, such as formulas, recipes, or algorithms. 
+
+Other Specialized IP Protections
+
+Industrial Designs: Protect the visual, aesthetic, or ornamental aspects of an item.
+Geographical Indications: Signify that a product originates from a specific location and has qualities attributable to that place.
+Plant Breeder's Rights: Protect new plant varieties from being sold or produced without permission. 
+
+IP rights are generally limited by time, scope, and geography, designed to balance innovator rights with public access. 
+
 
 ```bash
-/path/to/IPClaim/stamp.sh /path/to/your-repo "Your Name" [apc|apc-vf]
-```
-
-Or run it with prompts:
-
-```bash
-/path/to/IPClaim/stamp.sh /path/to/your-repo
-```
-
-This single command:
-
-1. Copies the timestamp workflow, verification instructions, and your chosen license into the target repo
-2. Fills in your author name, tree hash, and date automatically
-3. Commits and (optionally) pushes — triggering the timestamp workflow on GitHub
-
-Prerequisites: the target must be a git repo with at least one commit and a GitHub remote. If you can `git push`, the rest works.
 
 ---
 
-## Manual Setup (Fallback)
+## Critique of the Existing IP System (Tucked-Away Statement)
 
-If `stamp.sh` doesn't work for your setup, you can perform the same steps by hand.
-
-### 1. Add a License
-
-Select from two license options:
-
-- `LICENSE-APC.md` — All rights reserved, with authorship and IP claim
-- `LICENSE-APC-VF.md` — Same, with ValueFlow profit sharing included
-
-Copy your chosen license into your repository and fill in the placeholders: author name, tree hash (`git rev-parse HEAD^{tree}`), and today's date.
-
-### 2. Enable Timestamping
-
-Copy `.github/workflows/timestamp.yml` into your repository. Each push to main or master will:
-
-- Compute your repo's tree hash (Git's content hash for the tracked repository tree)
-- Timestamp it via FreeTSA.org (RFC 3161)
-- Save the `.tsr` proof in `.timestamps/`
-- Commit and push the evidence
-
-### 3. Add Verification Instructions
-
-Copy `VERIFY.md` into your repository. It contains step-by-step instructions for anyone to independently verify your claim using OpenSSL — no accounts, no fees, no intermediaries.
-
----
-
-## How It Works
-
-The process is straightforward and open:
-
-1. **Commit your work** — push your creation to GitHub.
-2. **Fingerprint it** — Git generates a unique hash of your project.
-3. **Seal it in time** — the hash is timestamped via FreeTSA.org.
-4. **Preserve the proof** — the `.tsr` token is stored in `.timestamps/` and committed.
-5. **Verify anytime** — confirm the timestamp and integrity with free tools.
-
-Everything happens within your repository. No external service holds your proof.
-
----
-
-## Contents
-
-| File | Purpose |
-|---|---|
-| `stamp.sh` | Automate the full IPClaim setup on any repo |
-| `LICENSE-APC.md` | All-rights-reserved license template |
-| `LICENSE-APC-VF.md` | License with ValueFlow profit sharing |
-| `VERIFY.md` | Independent verification instructions |
-| `.github/workflows/timestamp.yml` | Drop-in workflow for automatic timestamping |
-| `STAMPED-whitepaper.md` | The full case for why this works |
-
-`LICENSE-APC.md` and `LICENSE-APC-VF.md` are separate license tracks. `APC-VF` extends the base model with ValueFlow terms and is versioned independently.
-
----
-
-## Why It Matters
-
-IPClaim empowers creators by prioritizing evidence over authority. It establishes a public, unalterable record. Each commit is a declaration of authorship, supported by cryptography and time. For creators, this means gaining the recognition and protection they deserve — without asking permission from anyone.
+> No legal entity can require that Intellectual Property, one's mind's work, requires an investment in order to be given to the world by a specific entity (person, group, organisation, et cetera.) No lawmaker or law can, in their right mind, under a premise of sanity, prevent a person to share their mind's work with the rest of the planet, for maximized mutual benefit. Any claim of these practices being sane and beneficial is coercion into a life of falsehood and insanity. It is a forced compliance into the acknowledgement of things which are false as things which are true, detriments as benefits, control as personal right propagation. Any system that demands such compliance is fundamentally unjust and contrary to the wellbeing of creators and society.

@@ -1,6 +1,4 @@
-# STAMPED
-
-### Public Authorship Infrastructure for the Post-Patent Era
+# IPClaim: Public Authorship Infrastructure for the Post-Patent Era
 
 **v1.1 — February 2026**
 
@@ -18,7 +16,8 @@ The actual answer: **publish it, hash it, timestamp it, done.**
 
 ---
 
-## What Stamped Does
+
+## What IPClaim Does
 
 You submit your work. You get back proof that it's yours.
 
@@ -27,17 +26,17 @@ The proof is a **cryptographically signed, independently verifiable, publicly ac
 ### The Process
 
 **1. Submit.**
-Upload your files. Code, schematics, formulas, documentation, CAD drawings, white papers, datasets, images, audio, video — anything digital. **The act of submission is your consent.** By clicking Submit, you authorize Stamped to hash, timestamp, and license your content. No further paperwork. No forms. No approvals.
+Upload your files. Code, schematics, formulas, documentation, CAD drawings, white papers, datasets, images, audio, video — anything digital. By submitting, you authorize IPClaim to hash, timestamp, and license your content. No further paperwork. No forms. No approvals.
 
 **2. Hash the bundle.**
-Stamped computes a SHA-512 hash of every file, then builds a **Merkle tree** — pairing and rehashing until a single **root hash** remains. This root hash is a unique fingerprint of every file in your submission, collectively. Change one byte in one file and the root changes. Add a file, remove a file — the root changes. The root proves the bundle as a whole, not just individual pieces.
+IPClaim computes a SHA-512 hash of every file, then builds a **Merkle tree** — pairing and rehashing until a single **root hash** remains. This root hash is a unique fingerprint of every file in your submission, collectively. Change one byte in one file and the root changes. Add a file, remove a file — the root changes. The root proves the bundle as a whole, not just individual pieces.
 
 **3. Timestamp.**
 The Merkle root is submitted to multiple independent RFC 3161-compliant Time Stamping Authorities. The TSA signs the hash with a verified UTC clock and returns a `.tsr` token: a portable, cryptographic receipt that says "this exact data existed at this exact second."
 
 For redundancy, the root is also submitted to OpenTimestamps, which anchors it to the Bitcoin blockchain — a second, decentralized proof layer independent of any single authority.
 
-This is not experimental technology. RFC 3161 has been in production since 2001. It is used by banks, governments, and forensics labs. It is legally admissible under EU eIDAS and US Federal Rules of Evidence. It is boring, robust, and incontrovertible.
+This is not experimental technology. RFC 3161 has been in production since 2001. It is used by banks, governments, and forensics labs. It is legally admissible under EU eIDAS and US Federal Rules of Evidence. It is robust and incontrovertible.
 
 **4. License.**
 The submission is wrapped in the **APC License** (All Rights Reserved — Authorship & Patent Claim, v1.1). In practice, the package explicitly asserts:
@@ -52,7 +51,7 @@ The submission is wrapped in the **APC License** (All Rights Reserved — Author
 The license also establishes irrevocable prior art: if anyone later tries to patent what you already published, your record challenges that claim with dated public disclosure.
 
 **5. Package and return.**
-You receive a Stamped bundle containing:
+You receive an IPClaim bundle containing:
 
 | Item | What It Proves |
 |------|---------------|
@@ -64,13 +63,14 @@ You receive a Stamped bundle containing:
 | APC License (populated) | Legal declaration with your hashes, dates, and authorship embedded |
 | VERIFY.md | Instructions for anyone to independently confirm everything above |
 
-**That is your Stamped package.** It is self-contained. It is verifiable by anyone with OpenSSL. If Stamped disappears tomorrow, your proof still works — because the proof is in the math, not in the service.
+**That is your IPClaim package.** It is self-contained. It is verifiable by anyone with OpenSSL. If IPClaim disappears tomorrow, your proof still works — because the proof is in the math, not in the service.
 
 ---
 
+
 ## For Git Repositories (The Closed Loop)
 
-If your work lives in a Git repository, Stamped operates on the **Git tree hash** (`HEAD^{tree}`) — not the commit hash. The tree hash represents the exact content of all tracked files, stripped of manipulable metadata like author dates and commit messages. It cannot be backdated.
+If your work lives in a Git repository, IPClaim operates on the **Git tree hash** (`HEAD^{tree}`) — not the commit hash. The tree hash represents the exact content of all tracked files, stripped of manipulable metadata like author dates and commit messages. It cannot be backdated.
 
 The workflow:
 
@@ -84,6 +84,7 @@ This creates a closed, self-referencing chain of evidence: the timestamped conte
 ### Automated via GitHub Actions
 
 Drop a workflow file into your repo and every push to `main` is automatically timestamped, verified, and committed. No manual steps. The `.timestamps/` folder accumulates a permanent history of cryptographic proofs, one per push. (See `VERIFY.md` and `.github/workflows/timestamp.yml` for the verification and workflow details.)
+
 
 This means **a GitHub repository with APC + automated timestamping is a continuously updated record of authorship evidence**. It evolves with each repository state instead of freezing the proof at a single filing moment.
 
@@ -108,9 +109,10 @@ One of these systems is based on evidence. The other is based on permission.
 
 ## What Stamped Does Not Do
 
-Stamped does not grant you a government patent. It does not interface with the USPTO, WIPO, EPO, or any patent office. It does not send lawyers. It does not monitor markets. It does not pretend that a centralized enforcement apparatus is necessary, desirable, or competent.
 
-Stamped makes your authorship a **fact of public record**, proven by cryptography and time.
+IPClaim does not grant you a government patent. It does not interface with the USPTO, WIPO, EPO, or any patent office. It does not send lawyers. It does not monitor markets. It does not pretend that a centralized enforcement apparatus is necessary, desirable, or competent.
+
+IPClaim makes your authorship a **fact of public record**, proven by cryptography and time.
 
 What you do with that fact is yours.
 
@@ -126,7 +128,8 @@ The evidence-based alternative has been operational for 25 years. The cryptograp
 
 The only reason this hasn't replaced the patent system is that the patent system is an industry — with employees, budgets, law firms, and revenue streams that depend on the friction staying exactly where it is. Every calorie burned in that system is a calorie not spent on actual progress.
 
-Stamped does not disrupt that system. It ignores it. The infrastructure was already here. Someone just needed to assemble it and say it out loud.
+
+IPClaim does not disrupt that system. It ignores it. The infrastructure was already here. Someone just needed to assemble it and say it out loud.
 
 ---
 
@@ -144,7 +147,7 @@ Stamped does not disrupt that system. It ignores it. The infrastructure was alre
 | Repository integrity | Git tree hash (`HEAD^{tree}`, SHA-1/SHA-256) | Industry standard since 2005 |
 | Automation | GitHub Actions | Free tier covers most usage |
 | Free TSA services | FreeTSA.org, DigiCert, others | Operational, RFC 3161 compliant |
-| License framework | APC License v1.1 | Included in every Stamped package |
+| License framework | APC License v1.1 | Included in every IPClaim package |
 
 No tokens. No wallets. No browser extensions. No "Web3." No purple-and-green code boxes from companies that exist to be acquired. Standard internet infrastructure, assembled into the configuration that should have existed from the start.
 
@@ -156,7 +159,8 @@ Near zero. The infrastructure costs are trivial: TSA calls are free, hashing is 
 
 ---
 
-## Getting Started Without Stamped
+
+## Getting Started Without IPClaim
 
 You do not need this service. That is the point. Here is the full manual process:
 
