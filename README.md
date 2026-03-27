@@ -1,13 +1,17 @@
 
 # IPClaim
 
-> **Universal, Evidence-Based IP Claim**
 
-> I claim, as my intellectual property, whatever can be claimed and has not been previously claimed as IP by another. I do not need to specify in advance which parts of my work qualify as IP, nor do I need to hire experts, clerks, or lawyers to determine this for me. By publishing this work, I assert that all content disclosed herein—if and to the extent it qualifies as previously unclaimed intellectual property - is hereby claimed by me, with the combined timestamp and contents of disclosure provided as immutable, cryptographic evidence. 
 
 **Intellectual Property Claim for Am Era of Progress**
 
 IPClaim is a repo toolkit and proof model for publishing authorship claims as public, timestamped, independently verifiable records. IPClaim provides both the proof system and the reference implementation—there is no separate service or bundling layer.
+
+## The statement:
+
+> **Universal, Evidence-Based IP Claim**
+
+> I claim, as my intellectual property, whatever can be claimed and has not been previously claimed as IP by another. I do not need to specify in advance which parts of my work qualify as IP, nor do I need to hire experts, clerks, or lawyers to determine this for me. By publishing this work, I assert that all content disclosed herein—if and to the extent it qualifies as previously unclaimed intellectual property - is hereby claimed by me, with the combined timestamp and contents of disclosure provided as immutable, cryptographic evidence. 
 
 ## IPClaim: Meta-Proof - Your work is its own witness
 
