@@ -1,4 +1,4 @@
-
+﻿
 # IPClaim
 
 
@@ -110,3 +110,11 @@ IP rights are generally limited by time, scope, and geography, designed to balan
 ## Critique of the Existing IP System (Tucked-Away Statement)
 
 > No legal entity can require that Intellectual Property, one's mind's work, requires an investment in order to be given to the world by a specific entity (person, group, organisation, et cetera.) No lawmaker or law can, in their right mind, under a premise of sanity, prevent a person to share their mind's work with the rest of the planet, for maximized mutual benefit. Any claim of these practices being sane and beneficial is coercion into a life of falsehood and insanity. It is a forced compliance into the acknowledgement of things which are false as things which are true, detriments as benefits, control as personal right propagation. Any system that demands such compliance is fundamentally unjust and contrary to the wellbeing of creators and society.
+## Support This Work
+
+If this project is useful to you, consider supporting ongoing independent development.
+
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20this%20work-ff5e5b?logo=ko-fi&logoColor=white)](https://ko-fi.com/earthcraft)
+
+Direct link: https://ko-fi.com/earthcraft
+
