@@ -73,7 +73,7 @@ This license does not expire. There are no renewal fees, maintenance payments, o
 
 Despite the all-rights-reserved status declared in Part One, the Author grants universal, worldwide, perpetual access to use, implement, manufacture, adapt, and build upon the Work, subject to the conditions in this Part.
 
-Any party that generates profit from the use of this Work, or from any derivative of this Work, must compensate the Author according to the pricing model declared below.
+Any party that generates profit from the use of the Work, or from any derivative of this Work, must compensate the Author according to the pricing model declared below.
 
 ### VII. Pricing Model
 
@@ -123,49 +123,6 @@ Before manufacturing, deploying, or commercializing any product or service that 
 
 This declaration constitutes the contract between the user and the Author. It is completed and signed before production begins. The user is responsible for determining whether the product is commercially viable given the Author's stated terms.
 
-### IX. Contract Duration and Price Adjustment
-
-Each pre-use declaration is valid for a fixed term declared by the Author. If no term is specified, the default is 12 months from the date of the declaration.
-
-During the active term, the pricing stated in the declaration is locked. The Author cannot alter the price, revoke the grant, or impose new conditions on an active contract. The user's production, deployment, and commercialization proceed under the terms they agreed to.
-
-The Author may adjust pricing at any time, but adjusted pricing applies only to:
-
-1. New pre-use declarations submitted after the adjustment is published.
-2. Existing declarations upon renewal, after the current term expires.
-
-The Author must publish any price adjustment no fewer than 90 days before the earliest affected renewal date. The publication must be in the same location as the original pricing declaration — the repository, the license file, or the ValueFlow protocol registry.
-
-Upon renewal, the user reviews the updated terms and either accepts them (continuing production under new pricing) or declines (ceasing use of the Work within a 90-day wind-down period after the term expires). No response within 30 days of the renewal date constitutes acceptance of the new terms.
-
-The Author may not adjust pricing retroactively. The Author may not adjust pricing more than once per contract term. These constraints exist to protect the user's ability to plan, produce, and operate without disruption.
-
-### X. ValueFlow Protocol
-
-The pre-use declaration, pricing lookup, contract state, renewal notifications, and price adjustment publishing described in this license are administered through the ValueFlow protocol — a system that automates the exchange of structured information between Authors and users.
-
-The protocol handles:
-
-1. Registration of APC-VF licensed works and their pricing tables.
-2. Submission and acknowledgment of pre-use declarations.
-3. Contract state tracking: active term, renewal date, current pricing.
-4. Notification of price adjustments to affected users within the required lead time.
-5. Settlement reporting and payment reconciliation.
-
-The protocol's technical specification and reference implementation are maintained separately from this license. See the ValueFlow repository for the current specification.
-
-Where the protocol is not yet available or not adopted by both parties, the obligations in this license are fulfilled manually: declarations in writing, adjustments published in the repository, notifications by any verifiable written channel.
-
-### XI. Multi-Patent Products
-
-When a product incorporates works from multiple Authors, each under APC-VF, each Author's declared cost is independent and additive. The total intellectual property cost of the product is the sum of all applicable Authors' terms.
-
-The pre-use declaration must list every APC-VF licensed work used in the product. This list serves as attribution, as an auditable record linking profit to the Authors who made it possible, and as a public ledger of which intellectual contributions underlie the product.
-
-### XII. Non-Commercial Use
-
-Use of the Work that generates no profit — including personal use, education, academic research, and non-commercial experimentation — is permitted without charge, provided the user includes attribution as specified in Section XIII. The pricing model activates the moment the user derives profit from the Work.
-
 ---
 
 ## PART THREE: TERMS AND ENFORCEMENT
@@ -179,46 +136,6 @@ Every use of the Work or any derivative must include clear attribution to the Au
 3. A statement that the work is used under APC-VF License v2.0.
 
 Removal or concealment of attribution voids the grant of use under Part Two and converts continued use into infringement under Part One.
-
-### XIV. Settlement
-
-Payments may be settled through any mechanism agreed between the Author and user, including direct transfer, payment platform integration, periodic batch settlement, automated point-of-sale splitting, or programmatic contract execution.
-
-In the absence of an explicit agreement, the user must report usage and profit quarterly and settle within 30 days of each report.
-
-### XV. Infringement
-
-The blanket patent claim in Section III and the pre-use declaration requirement in Section VIII together eliminate the need for either party to conduct prior art searches, hunt for infringers, or preemptively litigate.
-
-If a product uses this Work commercially without a pre-use declaration, the infringement is established by the absence of a declaration against the public record of the Author's claim. The evidence is already assembled: the Author's timestamp, the product's existence, and the missing declaration.
-
-The Author is not obligated to enforce. If the Author chooses to enforce, the Author reserves all legal remedies available under applicable law in any jurisdiction. The Author also reserves the right to publicly identify the infringement and to revoke the ValueFlow grant for specific parties, converting their status to unauthorized use under Part One.
-
-### XVI. Submission as Consent
-
-If this Work was registered through a timestamping or bundling service, the act of submission constituted the Author's consent to hash, timestamp, and license the content under the terms of this license.
-
-### XVII. The Duty Clause
-
-This Work is published because optimal solutions, once they exist, must be available wherever the problems they solve exist. No product should rely on a suboptimal design when an optimal one has been disclosed. No process should generate avoidable waste when a more efficient one is available.
-
-The ValueFlow grant exists to remove the barrier between a disclosed solution and its application, while ensuring the Author is compensated for the contribution that made the application possible.
-
-### XVIII. Transparent Pricing
-
-All pricing declared under this license is public by design. As adoption grows, the declared terms for comparable works across Authors, industries, and jurisdictions become observable and comparable.
-
-Authors setting their pricing may reference established rates for similar contributions. Users evaluating whether to adopt a Work may compare the Author's terms against observable standards in their field. Where the compensation claimed by any party — Author or user — is disproportionate to the value delivered, the transparency of the public record makes that disproportion visible to anyone with an interest in the outcome.
-
-No central authority administers this process. The correction is structural: published terms are visible, comparable, and open to informed scrutiny.
-
-### XIX. Severability
-
-If any provision of this license is found unenforceable in a given jurisdiction, all remaining provisions remain in full effect.
-
-### XX. Acceptance
-
-By accessing, using, implementing, or building upon the Work, you accept the terms of this license in full: the authorship claim, the profit-sharing obligation, the attribution requirement, and the pre-use declaration obligation.
 
 ---
 

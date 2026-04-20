@@ -1,3 +1,13 @@
+## Developer Quickstart
+
+If you want to add IPClaim to your own repository quickly, follow the step-by-step guide in [QUICKSTART.md](QUICKSTART.md). The guide strongly recommends the APC `LICENSE` as the canonical, default choice for new integrations.
+
+**Canonical license:** This repository uses the APC license by default. The ValueFlow variant (APC-VF) is intentionally separated and archived for reference only — see the "Optional: ValueFlow (archived)" section below.
+
+## Optional: ValueFlow (archived)
+
+The APC-VF (ValueFlow) license is included only as an archived, referential artifact. It is NOT the default and is intentionally separated to avoid nudging integrators toward ValueFlow. If you wish to evaluate ValueFlow, review the archived file at [licenses/LICENSE-APC-VF.md](licenses/LICENSE-APC-VF.md) and consider adopting it only after careful evaluation and community adoption.
+
 
 # IPClaim
 
@@ -6,6 +16,12 @@
 **Intellectual Property Claim for Am Era of Progress**
 
 IPClaim is a repo toolkit and proof model for publishing authorship claims as public, timestamped, independently verifiable records. IPClaim provides both the proof system and the reference implementation—there is no separate service or bundling layer.
+
+## Developer Quickstart
+
+If you want to add IPClaim to your own repository quickly, follow the step-by-step guide in [QUICKSTART.md](QUICKSTART.md). It covers choosing a license (APC vs APC-VF), adding `VERIFY.md`, and enabling optional automated timestamping via GitHub Actions.
+
+**Canonical license:** This repository uses the APC license by default; the APC-VF (ValueFlow) variant is available for reference in `licenses/LICENSE-APC-VF.md`.
 
 ## The statement:
 
