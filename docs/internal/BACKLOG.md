@@ -1,4 +1,4 @@
-# IPClaim - Backlog
+# IPClaim Backlog
 
 - Add a simple end-to-end proof example if one is missing.
 - Tighten the docs around public, private, and timestamped states.

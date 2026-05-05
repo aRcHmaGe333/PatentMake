@@ -1,4 +1,4 @@
-# IPClaim - Definition of Done
+# IPClaim Definition Of Done
 
 - The authorship proof flow is reproducible from the documented inputs.
 - Timestamping, proof storage, and verification steps are aligned.

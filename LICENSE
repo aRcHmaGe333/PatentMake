@@ -13,7 +13,7 @@ This license treats publication as the claim. The timestamp is the patent. The h
 
 > **Universal, Evidence-Based IP Claim**
 >
-> I claim, as my intellectual property, whatever can be claimed and has not been previously claimed as IP by another. I do not need to specify in advance which parts of my work qualify as IP, nor do I need to hire experts, clerks, or lawyers to determine this for me. By publishing this work, I assert that all content disclosed herein—if and to the extent it qualifies as intellectual property and was not previously publicly claimed—is hereby claimed by me, with the time and contents of disclosure provided as immutable, cryptographic evidence.
+> I claim, as my intellectual property, whatever can be claimed and is not already owned, claimed, or publicly disclosed by another. I do not need to specify in advance which parts of my work qualify as IP, nor do I need to hire experts, clerks, or lawyers to determine this for me. By publishing this work, I assert that all content disclosed herein--if and to the extent it qualifies as intellectual property and is not already owned, claimed, or publicly disclosed by another--is hereby claimed by me, with the time and contents of disclosure provided as immutable, cryptographic evidence.
 
 ---
 
@@ -28,7 +28,7 @@ The contents of this repository, project, archive, or body of work — all files
 ## II. PATENT CLAIM BY PUBLIC RECORD
 
 
-This publication constitutes a **public, timestamped, cryptographically verifiable patent claim** over the Work as a whole. This claim covers all content that qualifies as IP and was not previously claimed by another.
+This publication constitutes a **public, timestamped, cryptographically verifiable patent claim** over the Work as a whole. This claim covers all content that qualifies as IP and is not already owned, claimed, or publicly disclosed by another.
 
 ### Proof of Integrity and Precedence
 
@@ -44,7 +44,7 @@ The **Merkle root hash** covers every file in this Work as a single, indivisible
 
 The **RFC 3161 timestamp token** is signed by an independent Time Stamping Authority and is verifiable by anyone using OpenSSL. It proves that the Merkle root — and therefore the exact content of every file — existed at the stated time. This standard has been in production for over 25 years and is legally admissible under EU eIDAS (Articles 41–42) and US Federal Rules of Evidence (901(b)(9)).
 
-No one else can produce an earlier public record of this Work, because no earlier public record exists. The Author published first. That is the claim, and it is self-proving.
+For the Author's original contribution, the public record establishes when the Work was published and what the Work contained at that time. That is the claim, and it is independently verifiable.
 
 ---
 
@@ -71,28 +71,28 @@ Publication is proof of authorship, not relinquishment of ownership. Visibility 
 
 ---
 
-## IV. PRIOR ART DEFENSE
+## IV. DEFENSIVE PUBLIC RECORD
 
-Simultaneously, this publication establishes **irrevocable prior art**.
+Simultaneously, this publication establishes a **defensive public record**.
 
-Should any third party file a patent, utility model, design registration, or any intellectual property claim over any concept, method, or system described in this Work — this public record exists to **destroy that claim on the grounds of prior disclosure**.
+Should any third party file a patent, utility model, design registration, or any intellectual property claim over any concept, method, or system described in this Work, this public record exists to challenge, defeat, or narrow that later claim because the work was already publicly disclosed here.
 
-The Author did it first. The record is public. The hash is verifiable. No examiner is required.
+For the Author's original contribution, the record is public, the hash is verifiable, and no examiner is required.
 
 ---
 
 
 ## V. DURATION AND MAINTENANCE
 
-## VI. Good-Faith Correction and Restitution
+## VI. GOOD-FAITH CORRECTION AND RESTITUTION
 
-If, due to a reasonable mistake by myself or the public, any portion of this work is later found to have been rightfully owned or previously claimed as IP by another, and I have benefited from it (including via the ValueFlow system or other documented means), I commit to transferring an objectively estimated share of those benefits to the rightful owner. This commitment reflects the principle that both I and the public acted in good faith based on the best available knowledge at the time of disclosure.
+If, due to a reasonable mistake by myself or the public, any portion of this work is later found to have been rightfully owned, already claimed, or already publicly disclosed by another, and I have benefited from it (including via the ValueFlow system or other documented means), I commit to transferring an objectively estimated share of those benefits to the rightful owner. This commitment reflects the principle that both I and the public acted in good faith based on the best available knowledge at the time of disclosure.
 
 This license does not expire. There are no renewal fees, maintenance payments, or lapse conditions. The claim persists for as long as the public record is accessible.
 
 ---
 
-## VI. ENFORCEMENT
+## VII. ENFORCEMENT
 
 The Author does not depend on courts, examiners, juries, or bureaucracies to validate this claim. The claim is self-evident from the public record and independently verifiable by anyone.
 
@@ -104,19 +104,19 @@ However, should any party infringe, the Author reserves:
 
 ---
 
-## VII. SUBMISSION AS CONSENT
+## VIII. SUBMISSION AS CONSENT
 
 If this Work was registered through a timestamping service (such as Stamped, ProofForge, or equivalent): **the act of submission constituted the Author's consent** to timestamp the content, generate the Merkle root, and apply this license. No further authorization was needed, requested, or given.
 
 ---
 
-## VIII. SEVERABILITY
+## IX. SEVERABILITY
 
 If any provision of this license is found unenforceable in any jurisdiction, all remaining provisions remain in full effect. A broken system's inability to recognize a valid claim does not weaken the claim.
 
 ---
 
-## IX. ACCEPTANCE
+## X. ACCEPTANCE
 
 By accessing, reading, downloading, forking, cloning, or otherwise interacting with the Work, you acknowledge the Author's claim of authorship and origin. You are not granted any rights. Contact the Author directly for permissions.
 
@@ -124,7 +124,7 @@ By accessing, reading, downloading, forking, cloning, or otherwise interacting w
 
 ## HOW TO USE THIS LICENSE
 
-1. Place this file as `LICENSE-APC.md` or `LICENSE` in the root of your repository or project.
+1. Place this file as `LICENSE` in the root of your repository or project.
 2. Run the manual timestamp process from `VERIFY.md` or add `.github/workflows/timestamp.yml` for automated timestamping.
 3. Fill in the proof table in Section II with your actual hashes and dates.
 4. Your first commit is your claim. The timestamp seals it. Done.

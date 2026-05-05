@@ -1,67 +1,81 @@
-# IPClaim — Developer Quickstart
+# IPClaim Developer Quickstart
 
-This page is the minimal, practical path for a developer who wants to add IPClaim-style timestamped authorship proofs to their own repository.
+This is the minimal path for adding IPClaim-style timestamped authorship proof to an existing Git repository.
 
-If you only want the short version:
+## Short Version
 
-1. Use the canonical APC `LICENSE` and copy it to your repo as `LICENSE`.
-2. Copy `VERIFY.md` into your repo root.
-3. (Optional) Add the timestamping workflow from `VERIFY.md` into `.github/workflows/timestamp.yml`.
-4. Commit and push. The workflow will create `.timestamps/<TREE_HASH>.tsr` or you can follow the manual steps in `VERIFY.md`.
+1. Use the canonical APC license from `LICENSE`.
+2. Copy `VERIFY.md`.
+3. Copy `.github/workflows/timestamp.yml`.
+4. Commit and push.
+5. Verify the generated `.timestamps/<TREE_HASH>.tsr` proof.
 
-Notes on choosing a license
-- `LICENSE` (APC — canonical): "All Rights Reserved — Authorship & Patent Claim". Use this when you want to publish a timestamped, cryptographically verifiable claim and retain full rights. This is the recommended default.
+The helper script automates those steps:
 
-If you are unsure, pick the canonical `LICENSE` for maximum clarity and change later deliberately.
+```bash
+./stamp.sh <target-repo-path> [author-name] [apc|apc-vf]
+```
 
-Step-by-step (POSIX)
+Example:
 
-```sh
-# From your project root (example assumes IPClaim repo is a sibling directory)
+```bash
+./stamp.sh ~/projects/myrepo "Jane Doe" apc
+```
+
+## Default Choice
+
+Use `apc` unless you have a clear reason to adopt the ValueFlow variant.
+
+- `apc` copies the canonical APC license into the target repo as `LICENSE`.
+- `apc-vf` copies the optional APC-VF variant into the target repo as `LICENSE`.
+
+Only one active license should exist in the target repo root.
+
+## Manual Setup
+
+From your project root, assuming IPClaim is a sibling repository:
+
+```bash
 cp ../IPClaim/LICENSE ./LICENSE
 cp ../IPClaim/VERIFY.md ./VERIFY.md
 mkdir -p .github/workflows
-# Copy the timestamp workflow snippet from IPClaim's VERIFY.md into .github/workflows/timestamp.yml
+cp ../IPClaim/.github/workflows/timestamp.yml ./.github/workflows/timestamp.yml
 git add LICENSE VERIFY.md .github/workflows/timestamp.yml
 git commit -m "Add APC license and timestamp workflow"
 git push
 ```
 
-Step-by-step (Windows PowerShell)
+Windows PowerShell equivalent:
 
 ```powershell
-# From your project root (example assumes IPClaim repo is a sibling directory)
 Copy-Item ..\IPClaim\LICENSE -Destination .\LICENSE
 Copy-Item ..\IPClaim\VERIFY.md -Destination .\VERIFY.md
 New-Item -ItemType Directory -Path .github\workflows -Force
-# Create .github\workflows\timestamp.yml by copying the YAML snippet from VERIFY.md
+Copy-Item ..\IPClaim\.github\workflows\timestamp.yml -Destination .github\workflows\timestamp.yml
 git add LICENSE VERIFY.md .github\workflows\timestamp.yml
 git commit -m "Add APC license and timestamp workflow"
 git push
 ```
 
-Verify (quick)
+## What Happens On Push
 
-1. After the workflow runs you will see `.timestamps/<TREE_HASH>.tsr` committed.
-2. Follow the `VERIFY.md` instructions to run `openssl ts -verify` or the `ots verify` step for `.ots` proof files.
+The GitHub Actions workflow:
 
+1. Computes the repository Git tree hash.
+2. Requests an RFC 3161 timestamp token from FreeTSA.
+3. Verifies the token immediately.
+4. Commits the proof under `.timestamps/`.
 
-Common pitfalls and how to avoid confusion
+The result is a public proof file tied to the exact repository contents.
 
-- Do NOT keep both an APC `LICENSE` and the APC-VF variant as active license files in your project root. Keep one as `LICENSE` and, if you need to retain the other for reference, place it in a `licenses/` subfolder.
-- Avoid copying multiple copies of IPClaim materials from other folders into the same repo; duplicate `README`, `LICENSE`, or `VERIFY.md` files will confuse integrators and automation.
-- If you see copies of IPClaim in other workspace folders (e.g., `HopOn/IPClaim`, `codex-linker/IPClaim`, `internal_quarantine/.../IPClaim`), treat those as templates or archived copies. Use the canonical `IPClaim` root in this workspace as the authoritative source unless you have a reason to pick a different copy.
+## Verification
 
+After the workflow runs, follow [VERIFY.md](VERIFY.md) to recompute the tree hash and verify the matching `.tsr` file with OpenSSL.
 
-If you'd like, I can:
+## Common Pitfalls
 
-- Create a minimal PR in this repo that adds `QUICKSTART.md` (this file) and the README pointer (done).
-- Consolidate the two license variants into an explicit `LICENSE_CHOICES.md` that explains differences and recommended defaults (done).
-- Remove or relocate duplicate copies into an `examples/` or `archive/` folder to avoid accidental merging.
-
-Tell me which of the above you'd like me to do next.
-
-## ValueFlow (optional & archived)
-
-The APC-VF (ValueFlow) license is intentionally separated from the default integration flow. It is archived in `licenses/LICENSE-APC-VF.md` and referenced here only for those who explicitly want to evaluate ValueFlow's profit-sharing model. Do not present it as the default; only adopt it after careful evaluation and community support.
+- Do not keep both APC and APC-VF as active root licenses.
+- Do not copy staging folders or unrelated workspace material into the target repo.
+- Do not treat commit dates as the proof. The proof target is the Git tree hash plus the timestamp token.
+- If you choose APC-VF, do it deliberately and document that choice.
 
