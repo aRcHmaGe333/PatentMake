@@ -6,8 +6,6 @@ IPClaim makes authorship evidence cheap, immediate, public, and verifiable. It g
 
 The point is not to turn every idea into a fight. The point is to make proof ordinary enough that useful solutions, methods, parts, systems, and technologies can be shown, trusted, adopted, and improved with less friction.
 
-IPClaim is also a specimen of itself: the claim, terms, verification method, and timestamped evidence are present in this repository.
-
 ## What It Does
 
 IPClaim attaches four things to a body of work:
@@ -44,6 +42,12 @@ The author is not required to identify in advance every protectable part of the 
 The claim therefore applies by default only to the author's original contribution, to the extent that it is not already owned, claimed, or publicly disclosed by another party.
 
 If already existing ownership, claim, or public disclosure is later found, those parts are excluded from the claim by default.
+
+Plainly: this is not about normal dependency or license hygiene for libraries, open-source packages, copied assets, bundled third-party code, or similar material. That remains a separate compliance issue.
+
+This is about the harder case: you genuinely created something, believed it was original, and disclosed it with timestamped proof, but later learn that someone else had already created the same protectable thing and made it publicly available. IPClaim still claims only the author's original contribution. If the same protectable work already belongs to someone else, it is excluded by default, whether or not the author knew at publication time.
+
+That is the burden reduction: the author does not need to classify every possible IP element before publishing, pay for exhaustive discovery, or ask an external authority for permission to disclose useful work. Publish the work, prove what was published, claim what is actually yours to claim, and correct the boundary if new information later shows that part of the work already belongs to someone else.
 
 ## License Model
 
